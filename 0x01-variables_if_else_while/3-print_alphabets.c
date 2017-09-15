@@ -2,7 +2,8 @@
 
 /**
  * main - Entry Point
- * Will print a through z followed by a new line.
+ * Will print a through z followed by capital A through Z
+ * followed by a new line.
  * Return: Always 0 (Success)
  */
 int main(void)
