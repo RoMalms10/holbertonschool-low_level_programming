@@ -1,5 +1,5 @@
-Low Level Programming
-holberton.h: Header file that contains function declarations.
+Low Level Programming<br>
+holberton.h: Header file that contains function declarations<br>
 File 0: Program that prints Holberton by calling the function \_putchar<br>
 File 1: Function that prints the alphabet in lowercase when called<br>
 File 2: Function that prints the alphabet in lowercase 10 times when called<br>
