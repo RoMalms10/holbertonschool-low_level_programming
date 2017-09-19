@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+  * main - Entry Point
+  * Uses prototype function to print characters
+  * Return: Always 0 (Success)
+  */
+
 int main(void)
 {
 	_putchar('H');
