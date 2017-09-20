@@ -12,3 +12,5 @@ File 8: Function that prints every minute of the day<br>
 File 9: Function that prints the 9 times table<br>
 File 10: Function that adds two integers<br> 
 File 11: Function that prints all natural numbers from n to 98<br>
+File 12: Function that prints out the "n" times table<br>
+File 13: Function that checks all numbers below 1024 if they are divisible by 3 or 5 and adds them together<br>
