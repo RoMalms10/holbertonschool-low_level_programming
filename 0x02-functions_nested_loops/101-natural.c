@@ -19,4 +19,5 @@ int main(void)
 			sum = i + sum;
 	}
 	printf("%d\n", sum);
+	return (0);
 }
