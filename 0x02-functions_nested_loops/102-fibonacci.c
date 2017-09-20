@@ -13,7 +13,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	for (i = 3; i < 50; i++)
+	for (i = 2; i < 50; i++)
 	{
 		sum = a + b;
 		if (i == 49)
