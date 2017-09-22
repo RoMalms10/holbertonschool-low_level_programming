@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * print_number - 
+  * print_number - Prints any number using printchar
   * @num: the number being passed to the function
   * Return: nothing, void. Stops the function if num is 0
   */
@@ -25,7 +25,7 @@ void print_number(int num)
 	{
 		n = num;
 	}
-	x = 10;
+	x = 1;
 	while ((n / x) > 9)
 		x *= 10;
 	while (x >= 1)
