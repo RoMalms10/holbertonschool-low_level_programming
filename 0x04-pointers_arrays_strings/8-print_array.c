@@ -19,6 +19,6 @@ void print_array(int *a, int n)
 		printf("%d, ", a[x]);
 		x++;
 	}
-	if (a[0] != '\0')
+	if (n > 0)
 		printf("%d\n", a[x]);
 }
