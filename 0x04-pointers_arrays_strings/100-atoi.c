@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	x = number = 0;
 	sign = 1;
-	while (!(s[x] >= 48 && s[x] <= 57)) /*while NOT a number*/
+	while ((!(s[x] >= 48 && s[x] <= 57)) && s[x] != '\0')
 	{
 		if (s[x] == '-')
 			sign *= -1;
@@ -21,7 +21,7 @@ int _atoi(char *s)
 	}
 	if (s[x] == '\0')
 		return (number);
-	while (s[x] >= 48 && s[x] <= 57) /*While it IS a number*/
+	while ((s[x] >= 48 && s[x] <= 57) && s[x] != '\0') /*While it IS a number*/
 	{
 		number = number * 10 + (s[x] - '0');
 		x++;
