@@ -34,6 +34,8 @@ char *cap_string(char *str)
 			str[index] = capitalize(str[index]);
 		if (str[index - 1] == '.')
 			str[index] = capitalize(str[index]);
+		if (index == 0)
+			str[index] = capitalize(str[index]);
 		index++;
 	}
 	return (str);
