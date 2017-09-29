@@ -12,13 +12,9 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int index;
 
-	index = 0;
-	while (index < n)
-	{
-		if (src[index - 1] == '\0' && index != 0) /*Want to copy \0*/
-			break;
+	for (index = 0; index < n && src[index] != '\0'; index++)
 		dest[index] = src[index];
-		index++;
-	}
+	for (; index < n; index++)
+		dest[index] = '\0';
 	return (dest);
 }
