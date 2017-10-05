@@ -9,7 +9,7 @@
 
 int calc(int n, int ctr)
 {
-	if ((n / 2) == ctr)
+	if (n == ctr)
 		return (1);
 	if (n % ctr == 0)
 		return (0);
