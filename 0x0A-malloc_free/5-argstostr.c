@@ -29,6 +29,8 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int i, j, k, count;
 
+	if (ac == 0 || av == NULL)
+		return (NULL);
 	k = count = 0;
 	for (i = 0; i < ac; i++)
 		count += findcount(av[i]) + 1;/*+1 because need \n instead \0*/
