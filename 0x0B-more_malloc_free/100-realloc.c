@@ -20,23 +20,21 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	hold = (char *)ptr;
 	if (new_size == old_size)
 		return (NULL);
-	if (ptr == NULL)
-	{
-		p = malloc(new_size);
-		return (p);
-	}
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-/*	if (new_size < old_size)
-		old_size = new_size;*/
+	if (new_size < old_size)
+		old_size = new_size;
 	p = malloc(new_size);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i <= old_size; i++)
-		p[i] = hold[i];
+	if (ptr != NULL)
+	{
+		for (i = 0; i <= old_size; i++)
+			p[i] = hold[i];
+	}
 	free(ptr);
 	return (p);
 }
