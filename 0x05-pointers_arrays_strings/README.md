@@ -8,5 +8,5 @@ File 5: Function that changes all lowercase characters to uppercase<br>
 File 6: Function that capitalizes all words of a string if preceeded by certain characters<br>
 File 7: Function that changes a string into leetspeak<br>
 File 8: Function that changes a string into Rot13<br>
-File 100: Function that prints integers using \_putchar<br>
+File 100: Function that prints integers using putchar<br>
 File 101: Perform arithmetic on a pointer to access memory and overwrite it
