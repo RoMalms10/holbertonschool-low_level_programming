@@ -1,5 +1,4 @@
-Low Level Programming<br>
-<br>
+<h1>Low Level Programming</h1>
 File 1: Function that takes apointer to an int and updates the value it points to<br>
 File 2: Function that swaps te value of two integers<br>
 File 3: Function that returns the length of a string<br>
