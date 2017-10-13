@@ -1,5 +1,4 @@
-Low-Level Programming<br>
-Recursion and Algorithms<br>
+<h1>Low-Level Programming: Recursion</h1>
 File 0: Function that prints a string followed by a new line, recursively<br>
 File 1: Function that prints a string backwards, recursively<br>
 File 2: Function that returns the length of a string, recursively<br>
