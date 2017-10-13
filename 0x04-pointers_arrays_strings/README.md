@@ -9,3 +9,4 @@ File 7: Function that prints the last half of a string<br>
 File 8: Function that prints 'n' elements of an array of integers<br>
 File 9: Function that copies the string passed into it to an array<br>
 File 100: Function that converts a string into the first contiguous integer it finds<br>
+file 101: Program that generates random valid passwords for the program 101-crackme
