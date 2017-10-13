@@ -1,5 +1,4 @@
-Low Level Programming<br>
-<br>
+<h1>Low Level Programming</h1>
 File 0: Function that checks if the passed parameter is uppercase<br>
 File 1: Function that checks if the passed parameter is a digit<br>
 File 2: Function that multiplies 2 integers<br>
