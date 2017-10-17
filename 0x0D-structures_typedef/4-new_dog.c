@@ -43,7 +43,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *Luna;
 
 	name_hold = _strdup(name);
+	if (name_hold == NULL)
+		return (NULL);
 	owner_hold = _strdup(owner);
+	if (owner_hold == NULL)
+		return (NULL);
 	Luna = malloc(sizeof(dog_t));
 	if (Luna == NULL)
 		return (NULL);
