@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #ifndef FUNCTION_SEEN
 #define FUNCTION_SEEN
 
