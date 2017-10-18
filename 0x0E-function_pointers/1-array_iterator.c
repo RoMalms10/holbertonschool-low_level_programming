@@ -13,7 +13,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
 
-	if (array == NULL)
+	if (array == NULL || action == NULL)
 		return;
 	for (i = 0; i < size; i++)
 		action(array[i]); /*Pass each integer one at a time to function*/
