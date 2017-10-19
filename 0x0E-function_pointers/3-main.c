@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	ag1 = atoi(argv[1]);
 	ag3 = atoi(argv[3]);/*Have to check here to see if atoi fails (0)*/
@@ -26,13 +26,13 @@ int main(int argc, char *argv[])
 		/*Checks if the first char in the string is / or %*/
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 	funcptr = get_op_func(argv[2]);
 	if (funcptr == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	capture = funcptr(ag1, ag3);
 	printf("%d\n", capture);
