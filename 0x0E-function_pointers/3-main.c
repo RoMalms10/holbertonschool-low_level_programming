@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 	ag1 = atoi(argv[1]);
 	ag3 = atoi(argv[3]);/*Have to check here to see if atoi fails (0)*/
 	if ((argv[2][0] == '/' || argv[2][0] == '%') && ag3 == '0')
-		/*Checks if the first char in the string is / or %*/
 	{
 		printf("Error\n");
 		exit(100);
