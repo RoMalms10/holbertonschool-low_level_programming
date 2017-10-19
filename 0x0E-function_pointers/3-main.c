@@ -12,7 +12,6 @@
 int main(int argc, char *argv[])
 {
 	int (*funcptr)(int, int); /*Need to hold the address later*/
-	int capture; /*Used to hold the value after function executes*/
 	int ag1, ag3;
 
 	if (argc != 4)
@@ -34,7 +33,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	capture = funcptr(ag1, ag3);
-	printf("%d\n", capture);
+	printf("%d\n", funcptr(ag1, ag3));
 	return (0);
 }
