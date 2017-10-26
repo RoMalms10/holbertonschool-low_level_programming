@@ -2,7 +2,7 @@
 
 ### File Descriptions:
 
-| **File Name** | **File Description |
+| **File Name** | **File Description** |
 | ------------- | ------------------ |
 | File 0 | Desc |
 | File 1 | Desc |
