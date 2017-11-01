@@ -13,10 +13,8 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *check_ptr;
 	const listint_t *current;
 
-	if (head == NULL)
-		exit(98);
-	current = head;
 	count = 0;
+	current = head;
 	while (current != NULL)
 	{
 		catchup = 0;
