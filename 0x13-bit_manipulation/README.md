@@ -1,6 +1,6 @@
 ### Low-Level Programming: Bitwise Manipulation
 
-| **File Name** | **Descirption** |
+| **File Name** | **Description** |
 | ------------- | --------------- |
 | holberton.h | Header file containing function declarations. |
 | 0-binary\_to\_uint.c | Function that converts a binary number to an unsigned int. |
