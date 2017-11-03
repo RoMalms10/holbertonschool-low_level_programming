@@ -9,3 +9,4 @@
 | 3-set\_bit.c | Function that sets the value of a bit to 1 at a given index. |
 | 4-clear\_bit.c | Function that sets the value of a bit to 0 at a given index. |
 | 5-flip\_bits.c | Function that returns the number of bits you would need to flip to get from one number to another. |
+| 100-get\_endianness.c | Function that checks the endianness of the current machine. |
