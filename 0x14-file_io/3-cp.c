@@ -52,7 +52,7 @@ int writing_file(int file_from, int file_to)
 	char *buffer;
 	int reading, wrote;
 
-	buffer = malloc(BUF_SIZE);
+	buffer = malloc(sizeof(char) * BUF_SIZE);
 	if (buffer == NULL)
 		return (-1);
 	do {
