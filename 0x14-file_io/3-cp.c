@@ -1,3 +1,5 @@
+#include <sys/types.h>
+#include <sys/stat.h>
 #include "holberton.h"
 
 /**
@@ -9,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, file_close, writing_check;
+	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
 		print_error(97);
@@ -17,7 +20,7 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		print_error(98, argv[1]);
 	/*open the file to write to*/
-	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, mode);
 	if (file_to == -1)
 		print_error(99, argv[2]);
 	/*write to file_to by pasing it to a function*/
