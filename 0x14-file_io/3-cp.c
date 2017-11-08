@@ -53,6 +53,8 @@ int writing_file(int file_from, int file_to)
 	int reading, wrote;
 
 	buffer = malloc(BUF_SIZE);
+	if (buffer == NULL)
+		return (-1);
 	do {
 		reading = read(file_from, buffer, BUF_SIZE);
 		if (reading == -1)
