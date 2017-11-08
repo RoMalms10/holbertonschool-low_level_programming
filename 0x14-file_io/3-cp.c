@@ -58,10 +58,16 @@ int writing_file(int file_from, int file_to)
 	do {
 		reading = read(file_from, buffer, BUF_SIZE);
 		if (reading == -1)
+		{
+			free(buffer);
 			return (-1);
+		}
 		wrote = write(file_to, buffer, reading);
 		if (wrote == -1 || wrote != reading)
+		{
+			free(buffer);
 			return (-2);
+		}
 	} while (reading == 1024);
 	free(buffer);
 	return (0);
