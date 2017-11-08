@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	file_close = close(file_to);
 	if (file_close == -1)
 		print_error(100, file_to);
-	return (0);
+	return (1);
 }
 
 /**
