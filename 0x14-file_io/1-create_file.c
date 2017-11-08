@@ -23,5 +23,6 @@ int create_file(const char *filename, char *text_content)
 	wrote = write(opened, text_content, i);
 	if (wrote == -1)
 		return (-1);
+	close(opened);
 	return (1);
 }
