@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
-  *
-  *
-  *
+  * delete_dnodeint_at_index - deletes a node at the index
+  * @head: double pointer to the list
+  * @index: indicates which node to delete
+  * Return: 1 if success, -1 if failed
   */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -24,7 +25,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (traverse == NULL)
 			return (-1);
 		traverse->prev->next = traverse->next;
-		traverse->next->prev = traverse->prev;
+		if (traverse->next != NULL)
+			traverse->next->prev = traverse->prev;
 	}
 	free(traverse);
 	return (1);
