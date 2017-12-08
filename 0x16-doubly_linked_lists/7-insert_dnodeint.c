@@ -27,11 +27,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	else
 	{
 		traverse = *h;
-		for (i = 0; traverse->next != NULL && i < (idx - 1); i++)
+		for (i = 0; traverse->next != NULL && i < idx; i++)
 			traverse = traverse->next;
-		newnode->next = traverse->next;
-		newnode->prev = traverse;
-		traverse->next = newnode;
+		newnode->next = traverse;
+		newnode->prev = traverse->prev;
+		traverse->prev->next = newnode;
 	}
 	return (newnode);
 }
