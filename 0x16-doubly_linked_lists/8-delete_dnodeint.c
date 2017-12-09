@@ -17,6 +17,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		*head = traverse->next;
+		if (traverse->next != NULL)
+			traverse->next->prev = NULL;
 	}
 	else
 	{
