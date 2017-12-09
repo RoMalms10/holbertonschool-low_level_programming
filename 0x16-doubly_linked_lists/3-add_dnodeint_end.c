@@ -4,7 +4,7 @@
   * add_dnodeint_end - adds node to the end of a doubly liked list
   * @head: double pointer the beginning of the doubly linked list
   * @n:the number to put in the new element
-  * Return: 
+  * Return: The new node's address
   */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
