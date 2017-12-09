@@ -31,11 +31,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		traverse = *h;
 		for (i = 0; traverse->next != NULL && i < idx; i++)
 			traverse = traverse->next;
+		if (traverse->next == NULL && i != (idx - 1))
+		{
+			free(newnode);
+			return (NULL);
+		}
 		newnode->next = traverse;
 		newnode->prev = traverse->prev;
 		traverse->prev->next = newnode;
 		traverse->prev = newnode;
 	}
-	printf("%d\n", traverse->n);
 	return (newnode);
 }
