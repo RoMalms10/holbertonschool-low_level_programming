@@ -1,5 +1,10 @@
 #include "hash_tables.h"
 
+/**
+  * hash_table_print - prints a hash table
+  * @ht: the hash table to print
+  * Return: nothing, void
+  */
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
@@ -25,8 +30,15 @@ void hash_table_print(const hash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+  * print_list - prints the singly linked list if a collision occured.
+  * Starts at the second element since the first was already printed
+  * @list: the head of the list to print
+  * Return: nothing, void
+  */
 void print_list(hash_node_t *list)
 {
+	/*Move one forward since head was already printed*/
 	list = list->next;
 	while (list != NULL)
 	{
