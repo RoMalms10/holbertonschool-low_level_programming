@@ -30,6 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			search->value = (char *)value;
 			return (1);
 		}
+		search = search->next;
 	}
 
 	new_node->key = (char *)key;
