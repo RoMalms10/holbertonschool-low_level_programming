@@ -27,6 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 
 void print_list(hash_node_t *list)
 {
+	list = list->next;
 	while (list != NULL)
 	{
 		printf(", ");
