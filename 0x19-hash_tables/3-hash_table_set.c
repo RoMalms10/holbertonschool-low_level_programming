@@ -9,6 +9,7 @@
   */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	hash_node_t *search;
 	hash_node_t *new_node;
 	unsigned long int index = 0;
 
@@ -20,6 +21,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
+
+	search = ht->array[index];
+	while (search != NULL)
+	{
+		if (strcmp(search->key, key) == 0)
+		{
+			search->value = (char *)value;
+			return (1);
+		}
+	}
 
 	new_node->key = (char *)key;
 	new_node->value = (char *)value;
