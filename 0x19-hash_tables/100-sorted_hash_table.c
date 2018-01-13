@@ -81,7 +81,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 
 /**
-  * place in slist - places the new node in the sorted list
+  * place_in_slist - places the new node in the sorted list
   * @ht: The hash table
   * @new_node: the new_node
   * Return: nothing, void
