@@ -17,4 +17,5 @@
 | 4-hash\_table\_get.c    | Function that retrieves the value at a key   |
 | 5-hash\_table\_print.c  | Function that prints a hash table            |
 | 6-hash\_table\_delete.c | Function that deletes a hash table           |
+| 100-sorted\_hash\_table.c | Contains updated functions that implement sorted hash data structure |
 | hash\_tables.h          | Header file                                  |
