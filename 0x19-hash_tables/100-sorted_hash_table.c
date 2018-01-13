@@ -74,7 +74,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 /*Assigns where the new node goes in array*/
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-	
+
 	place_in_slist(ht, new_node);
 
 	return (1);
@@ -220,7 +220,7 @@ void shash_table_delete(shash_table_t *ht)
 		if (head->value != NULL)
 			free(head->value);
 		free(head);
-		head = next;;
+		head = next;
 	}
 
 	free(ht->array);
