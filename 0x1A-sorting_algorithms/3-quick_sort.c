@@ -25,7 +25,7 @@ void lomuto_sort(int *array, int LP, int RP, size_t size)
 	int temp;
 	int L_moved = 0;
 
-	if (RP < LP || RP == LP)
+	if (RP < LP)
 		return;
 	while (RP > LP && RP != LP)
 	{
