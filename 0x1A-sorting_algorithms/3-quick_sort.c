@@ -8,6 +8,8 @@
   */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL)
+		return;
 	lomuto_sort(array, 0, (size - 2), size);
 }
 
@@ -25,9 +27,9 @@ void lomuto_sort(int *array, int LP, int RP, size_t size)
 	int temp;
 	int L_moved = 0;
 
-	if (RP < LP)
+	if (LP > RP)
 		return;
-	while (RP > LP && RP != LP)
+	while (LP < RP && LP != RP)
 	{
 		if (array[LP] > array[Pivot])
 		{
