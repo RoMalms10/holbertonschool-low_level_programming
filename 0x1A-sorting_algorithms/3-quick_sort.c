@@ -34,7 +34,7 @@ void lomuto_sort(int *array, int LP, int RP, size_t size)
 		{
 			for (; LP < RP && LP != RP; RP--)
 			{
-				if (array[RP] < array[Pivot])
+				if (array[RP] <= array[Pivot])
 				{
 					temp = array[LP];
 					array[LP] = array[RP];
