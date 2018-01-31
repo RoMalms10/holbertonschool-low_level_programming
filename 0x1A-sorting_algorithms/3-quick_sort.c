@@ -10,52 +10,77 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL)
 		return;
-	lomuto_sort(array, 0, (size - 2), size);
+	partition(array, 0, (size - 1), size);
 }
 
 /**
-  * lomuto_sort - sorts an array using quick sort lomuto partition
+  * lomuto_sort - uses lomuto partition to sort an array
   * @array: the array to sort
-  * @LP: the left pointer
-  * @RP: the right pointer
+  * @low_point: the lowest point in the array to start at
+  * @high_point: the highest point in the array to go to
+  * @size: the size of the array
+  * Return: where the pivot ends up being placed at the end
+  */
+int lomuto_sort(int *array, int low_point, int high_point, size_t size)
+{
+	int hold;
+	int search;
+	int pivot;
+
+	hold = low_point - 1;
+	search = low_point;
+	pivot = high_point;
+
+	while (search != pivot)
+	{
+		if (array[search] < array[pivot])
+		{
+			hold++;
+			if (search != hold)
+				swap_func(array, search, hold, size);
+		}
+		search++;
+	}
+	hold++;
+	if (array[hold] > array[pivot])
+		swap_func(array, hold, pivot, size);
+	return (hold);
+}
+
+/**
+  * partition - sets the sections to be looked through and passes them
+  * @array: the array to sort
+  * @low_point: the lowest point in the array to start at
+  * @high_point: the highest point in the array to go to
   * @size: the size of the array
   * Return: nothing, void
   */
-void lomuto_sort(int *array, int LP, int RP, size_t size)
+void partition(int *array, int low_point, int high_point, size_t size)
 {
-	int Pivot = RP + 1;
+	int low_ended_at;
+
+	if (low_point < high_point)
+	{
+		low_ended_at = lomuto_sort(array, low_point, high_point, size);
+		partition(array, low_point, (low_ended_at - 1), size);
+		partition(array, (low_ended_at + 1), high_point, size);
+	}
+}
+
+/**
+  * swap_func - swaps 2 numbers in the array
+  * @array: the array to sort
+  * @number1: the first position in the array to swap
+  * @number2: the second position in the array to swap
+  * @size: the size of the array
+  * Return: nothing, void
+  */
+void swap_func(int *array, int number1, int number2, size_t size)
+{
 	int temp;
 
-	if (LP > RP)
-		return;
-	while (LP < RP && LP != RP)
-	{
-		if (array[LP] > array[Pivot])
-		{
-			for (; LP < RP && LP != RP; RP--)
-			{
-				if (array[RP] <= array[Pivot])
-				{
-					temp = array[LP];
-					array[LP] = array[RP];
-					array[RP] = temp;
-					LP++;
-					RP--;
-					print_array(array, size);
-					break;
-				}
-			}
-		}
-		else
-			LP++;
-	}
-	if (array[LP] > array[Pivot])
-	{
-		temp = array[Pivot];
-		array[Pivot] = array[LP];
-		array[LP] = temp;
-		print_array(array, size);
-	}
-	lomuto_sort(array, 0, (RP - 1), size); /*Left side recursion*/
-	lomuto_sort(array, (LP + 1), (Pivot - 1), size); /*Right side recursion*/
+	temp = array[number1];
+	array[number1] = array[number2];
+	array[number2] = temp;
+	print_array(array, size);
 }
