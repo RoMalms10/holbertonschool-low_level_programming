@@ -34,5 +34,8 @@ int lomuto_sort(int *array, int low_point, int high_point, size_t size);
 void partition(int *array, int low_point, int high_point, size_t size);
 void swap_func(int *array, int number1, int number2, size_t size);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void swap_down(listint_t **list, listint_t *search);
+void swap_up(listint_t **list, listint_t *search);
 
 #endif
