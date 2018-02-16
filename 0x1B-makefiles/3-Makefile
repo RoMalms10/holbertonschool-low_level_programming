@@ -20,10 +20,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	$(RM) $(OBJ) *~ $(NAME)
+fclean: clean oclean
 
-re: force
-	$(CC) $(OBJ) -o $(NAME)
-
-.PHONY: force
+re: oclean all
