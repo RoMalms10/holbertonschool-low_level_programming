@@ -15,13 +15,13 @@ $(NAME): $(OBJ)
 	$(CC) -c -o $@ $<
 
 clean:
-	$(RM) *~ *.swp $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
 fclean:
-	$(RM) $(OBJ) *~ *.swp $(NAME)
+	$(RM) $(OBJ) *~ $(NAME)
 
 re: force
 	$(CC) $(OBJ) -o $(NAME)
