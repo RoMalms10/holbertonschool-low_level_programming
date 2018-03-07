@@ -1,3 +1,7 @@
 [submodule "0x18-stacks_queues_lifo_fifo/monty"]
 	path = 0x18-stacks_queues_lifo_fifo/monty
 	url = https://github.com/RoMalms10/monty
+[submodule "0x1C-binary_trees"]
+	path = 0x1C-binary_trees
+	url = https://github.com/Dimitriopolous/0x1C-binary_trees.git
+	branch = master
