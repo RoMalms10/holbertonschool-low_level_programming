@@ -36,10 +36,7 @@ int binary_search_helper(int *array, size_t lo, size_t hi, int value)
 		/* Print the array to search through */
 		printf("Searching in array: ");
 		for (index = lo; index < hi; index++)
-		{
-			printf("%d", array[index]);
-			printf(", ");
-		}
+			printf("%d, ", array[index]);
 		printf("%d\n", array[index]);
 
 		/* Find midpoint */
@@ -52,7 +49,7 @@ int binary_search_helper(int *array, size_t lo, size_t hi, int value)
 		else if (array[mid] < value)
 			return (binary_search_helper(array, mid + 1, hi, value));
 		/* Look at the left side of the array */
-		else
+		else if (array[mid] > value)
 			return (binary_search_helper(array, 0, mid - 1, value));
 	}
 	return (-1);
