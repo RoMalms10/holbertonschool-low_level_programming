@@ -50,7 +50,7 @@ int binary_search_helper(int *array, size_t lo, size_t hi, int value)
 			return (binary_search_helper(array, mid + 1, hi, value));
 		/* Look at the left side of the array */
 		else if (array[mid] > value)
-			return (binary_search_helper(array, 0, mid - 1, value));
+			return (binary_search_helper(array, lo, mid - 1, value));
 	}
 	return (-1);
 }
